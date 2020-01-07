@@ -1,8 +1,10 @@
-*IrisFDTD*    <img style="float: right;" src="Z_SDL_H52.e3.bmp">
+*IrisFDTD*    
 ===========
 
 *IrisFDTD* is an implementation of the Finite-Difference Time-Domain (FDTD) method, one of the most widely 
 used Maxwell’s equation solvers in the field of computational electrodynamics for photonics and nanotechnology.
+
+<img style="float: right;" src="Z_SDL_H52.e3.bmp">
 
 *IrisFDTD* is licensed under the AGPL and it is free to use.  However, if you are using, 
 or plan to use it, specially if it is for research or academic purposes, please send an email with your name,
