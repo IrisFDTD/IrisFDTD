@@ -1,10 +1,15 @@
 *IrisFDTD*    
-===========
+=========
 
 *IrisFDTD* is an implementation of the Finite-Difference Time-Domain (FDTD) method, one of the most widely 
 used Maxwell’s equation solvers in the field of computational electrodynamics for photonics and nanotechnology.
 
+Light does funny things when interacting with structures consisting in tiny bricks of matter. These funny things show up naturally if one can solve Maxwell's equations and this is what I tried last years: to implement several numerical and analytical methods applied to Nanophotonics. Definetively, coding and seeing what's going on with EM fields in nanostructures has been one of my favorites games these years. I'm proud of most of the codes I worked on, but there is one that made feel great moments and also desperate ones. This is *IrisFDTD*, an implementation of the famous Finite-Difference Time-Domain (FDTD) method, one of the most widely used solvers of Maxwell’s equations in Nanophotonics.
+
 <img style="float: right;" src="Z_SDL_H52.e3.bmp">
+
+*IrisFDTD* is more than a program for me. Sometimes, I wonder what would happen if some day I will decide jumping to a different topic of research. Probably all the years of coding would be end in an old computer that nobody will never use. This is why I decided to share with others IrisFDTD and do it public. This is the motivation of this project. I hope IrisFDTD will be in the future a nice tool for researchers and students.
+
 
 *IrisFDTD* is licensed under the AGPL and it is free to use.  However, if you are using, 
 or plan to use it, specially if it is for research or academic purposes, please send an email with your name,
@@ -42,3 +47,5 @@ The FDTD method has been applied in a great variety of engineering and physical 
 
 [3] https://publons.com/researcher/2827893/sergio-gutierrez-rodrigo/
  
+
+***
