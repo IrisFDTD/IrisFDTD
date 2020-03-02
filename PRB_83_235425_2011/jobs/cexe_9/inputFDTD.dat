@@ -1,0 +1,159 @@
+Fig. 2(a) |
+S. G. Rodrigo, S. Carretero-Palacios, F. J. GarcíaVidal and L. Martín-Moreno, |
+"Metallic slit arrays filled with third order nonlinear media: Optical Kerr | 
+effect and third harmonic generation," Phys. Rev. B 83, 235425, (2011) | 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+# SHARED DATA
+"Mesh Options"
+1 0 (system_model: 0=isolated ; 1=array)
+2 1 i_pol (polarization of light: 2=p-pol; 1=s-pol)
+5.0 q (mesh size in nm)
+240 ixmax (x-dir lattice constant in mesh units)
+1 iymax (y-dir lattice constant in mesh units)
+500 izmax (z-dir simulation box size)
+0.8 CFL (courant–Frederick–Levy coefficient)
+1 ABCmodel(absorbing Boundary Condition model: 0=UPML ; 1=UPML+CCOM)
+0.09 wzPML (UPML parameter)
+2 nPML (UPML parameter)
+100 pmlzi (from z=0 width of the UPML)
+400 pmlzf (since z=izmax width of the UPML)
+2 J_Higdon (CCOM parameter)
+15 w_CC0M (CCOM width)
+0.0 alfa (CCOM parameter)
+0.0 angle(1) "
+0.0 angle(2) "
+0.0 angle(3) "
+0.0 angle(4) " 
+1 0 0 em_source(1:3) (TFSF Gaussian-array Dipoles)
+2 0 tfsf_pos,tfsf_slab_launcher
+1.0 0.0 0 RATIO_ANGLE TFSF
+1 1.0e3 1.0e10 plane_wave, tincr_PW,tdecay_PW TFSF (plane_wave: 0=tfsf_gauss; 1=tfsf_plane_wave; 2=tfsf_sech; 3=tfsf_gauss 2-beams; 4=tfsf_gaussian_beam)
+0 0 0 0 nxm,nxp,nym,nyp Bloch's wave packet parameters
+1 ix_cur Wave packet centering at x,
+1 iy_cur y,
+120 iz_cur z position 
+1686 GAP (spatial width of the gaussian beam)
+1578.41 1495.20 lf wavelength of light in nm
+
+"TFSF field initial parameters"
+1736.03524 1578.41 820.0 2.12469426899206 Epump(kV/cm) ,wavelength_pump(nm) ,time_width(fs) ,width_factor
+0.0e0 1495.20 20.0 20.0 Eprobe,wlprobe,probe_DT,DTpump_probe (kV/cm,nm,fs,fs)
+180 185 tfsf_o tfsf_f
+1 cosine (0=complex valued EM fields; 1=real valued EM fields)
+120 1 200 xtest,ytest,ztest
+-------------------------------------------------------
+Epump=8680.1762KV/cm corresponds to I=100 GW/cm^2
+-------------------------------------------------------
+
+"Running Options"
+2 1 0 runmode 
+2 m_structure
+0 corr_struct 
+50 500 no_archivos Output files unloaded a "no_archivos"times
+2400.0 fs
+199 s_uno For ARRAYS - Surface in which neflection is
+200 hi All structures are defined between hi 
+0 1 0 SDL_X,SDL_Y,SDL_Z
+
+"Drude-Lorentz parameters"
+5 metalmodel
+0 old_access
+2 i_metal 1:Ag ; 2:Au ; 3:Cu ; 4:Al ; 5:Ni ; 6:W ; 7:Cr ; 8:Co missing) ; 9:SiC ; 10:j-aggregate
+4 i_metal_fit 1: Au(Vial); 4:Au(Hao)
+
+"No Lineal"
+1 NONLINEAR=1; OTHERWISE=0
+97089.36 0.0 Chi_3dielectric Chi_3_metal
+10.0 epsr
+
+"Dielectric constants"
+1.0 eps(1) Reflection region dielectric constant
+10.0 eps_bbox Default dielectric constant inside structures (PMMA in this input file)
+1.0 eps(3)
+
+#MODE OPTIONS
+"Transmission/Reflection"
+375 sdos
+400 nopto Number of sampled points (in frequency) within [lno,lnf]
+1300.0 lno
+1800.0 lnf Final "
+0 ks_out
+1 in Incident current (1:0n 0:Off)
+1 trans Transmitted current(1:0n 0:Off)
+1 ref
+0 outPML UPML outgoing currents (1:On 0:Off)
+0.0 1 t_fourier(fs),sample_fourier
+
+"List modes"
+1 List modes - Activo:1 ; Desactivado:0
+1 nopropag(1) - No modos propagantes región I
+1 ikx
+1 iky
+1 nopropag(2) - No modos propagantes región III
+1 ikx
+1 iky
+! Por defecto todos los modos <<<
+
+"SDL"
+"cluster" m_RUTASDL " m_RUTASDL "cluster" SH m_RUTASDL
+0 2 0 0
+0 1 0 sxi
+0 240 0 sxf
+0 1 0 syi
+0 1 0 syf
+0 100 0 szi
+0 400 0 szf
+1 E
+0 Ex
+0 Ey
+0 Ez
+0 Hx
+0 Hy
+0 Hz
+1 240 1 1 100 400
+
+"SERS"
+6 0 mode 2 0 r mode 0:To calculate EM fields 2:post processing (SDL...): 9:FDTD_GENERAL (dipole ref extraction...)
+1 1 sxi mxi
+240 240 sxf mxf
+1 1 syi myi 
+1 1 syf myf 
+150 150 szi mzi
+370 370 szf mzf
+
+"w=cte"
+1 0 emmode
+2 Direct wavelength reading - 0:Off ; 1:On
+2 no_wavelengths
+250 nowav
+0.5 d_lambda
+526.13 498.3
+1578.41 1495.20
+1.0e4 1 to_Fourier, sample_Fourier
+'X=cte'
+0
+'Y=cte'
+0
+'Z=cte'
+0
+
+# STRUCTURE DATA
+"Slit Array"
+0 SYMMETRY_ON
+37 h_bbox
+20 slit width
+1 struct_version
+200 hi_met
+236 hf_met
+0 Region_I
+1 Region_II
+0 Region_III
+
+# GRAPHIC MESH GENERATION
+"Estructure graphic"
+0 graphic 0:Off 1:0n
+2 LayerMESH Plane cut at constant 1:X, 2:Y 3:Z
+1 240 1 1 200 236 Boundaries of the box:xi,xf,yi,yf,zi,zf (zi>=hi and zf<=hf)
+1 layerno (Do not change)
+1 Cut at X,Y or Z value in mesh units
