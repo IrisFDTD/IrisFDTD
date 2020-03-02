@@ -56,7 +56,10 @@ The best way (as always) to learn and use new programs is going through the exam
 
 While Windows and Linux executable versions of the program are provided (IrisFDTD_64bits_Windows & IrisFDTD_64bits_Linux), the code is not yet available. This is something I working on... The description of input files and how the information of optical properties are retrieved from the output files is on its way. 
 
+*Updated: 02/03/2020*
 
 |Available|Folder|Published (see [Publons](https://publons.com/researcher/2827893/sergio-gutierrez-rodrigo/))|
 |:-----:|:-----:|:-----:|
-|?  |PRB_83_235425_2011|S. G. Rodrigo, S. Carretero-Palacios, F. J. García-Vidal and L. Martín-Moreno, [*Metallic slit arrays filled with third order nonlinear media: Optical Kerr effect and third harmonic generation*](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.83.235425), Phys. Rev. B 83, 235425, (2011).|
+|Yes  |PRB_83_235425_2011|S. G. Rodrigo, S. Carretero-Palacios, F. J. García-Vidal and L. Martín-Moreno, [*Metallic slit arrays filled with third order nonlinear media: Optical Kerr effect and third harmonic generation*](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.83.235425), Phys. Rev. B 83, 235425, (2011).|
+
+***
